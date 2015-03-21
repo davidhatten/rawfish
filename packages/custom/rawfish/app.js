@@ -26,6 +26,13 @@ Rawfish.register(function(app, auth, database, http) {
     roles: ['authenticated'],
     menu: 'main'
   });
+
+  Rawfish.menus.add({
+    title: 'Join the Game!',
+    link: 'join game',
+    roles: ['authenticated'],
+    menu: 'main'
+  });
   
   Rawfish.aggregateAsset('css', 'rawfish.css');
 
