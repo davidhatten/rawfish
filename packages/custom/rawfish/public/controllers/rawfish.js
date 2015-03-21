@@ -4,6 +4,11 @@
 angular.module('mean.rawfish').controller('RawfishController', ['$scope', '$location', 'Global', 'Rawfish',
   function($scope, $location, Global, Rawfish) {
     $scope.global = Global;
+    $scope.lulz = [
+      {title: 'player1', value: 'lololol'},
+      {title: 'player2', value: 'lololololololo'}
+    ];
+
     $scope.package = {
       name: 'rawfish'
     };
