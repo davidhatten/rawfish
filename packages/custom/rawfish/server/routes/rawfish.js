@@ -2,7 +2,7 @@
 
 /* jshint -W098 */
 // The Package is past automatically as first parameter
-module.exports = function(Rawfish, app, auth, database) {
+module.exports = function(Rawfish, app, auth, database, io) {
 
   app.get('/rawfish/example/anyone', function(req, res, next) {
     res.send('Anyone can access this');

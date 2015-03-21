@@ -11,10 +11,13 @@ var Rawfish = new Module('rawfish');
  * All MEAN packages require registration
  * Dependency injection is used to define required modules
  */
-Rawfish.register(function(app, auth, database) {
+Rawfish.register(function(app, auth, database, http) {
+
+  var io = require('./server/config/socketio')(http);
+  Rawfish.io = io;
 
   //We enable routing. By default the Package Object is passed to the routes
-  Rawfish.routes(app, auth, database);
+  Rawfish.routes(app, auth, database, io);
 
   //We are adding a link to the main menu for all authenticated users
   Rawfish.menus.add({
