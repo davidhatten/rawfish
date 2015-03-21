@@ -9,6 +9,8 @@ angular.module('mean.rawfish').controller('RawfishController', ['$scope', '$loca
       {title: 'player2', value: 'lololololololo'}
     ];
 
+    $scope.lulz.push({title: 'player3', value: 'the lulz of most'});
+
     $scope.package = {
       name: 'rawfish'
     };
